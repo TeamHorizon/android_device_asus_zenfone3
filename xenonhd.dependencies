@@ -1,0 +1,23 @@
+[
+  {
+    "repository": "LineageOS/android_device_qcom_common",
+    "target_path": "device/qcom/common",
+    "branch": "lineage-15.1"
+  },
+  {
+   "repository": "LineageOS/android_packages_resources_devicesettings",
+   "target_path": "packages/resources/devicesettings",
+   "branch": "lineage-15.1"
+  },
+  {
+    "repository": "makorn645/android_kernel_asus_msm8953",
+    "target_path": "kernel/asus/msm8953",
+    "branch": "o8.1"
+  },
+  {
+    "repository": "makorn645/proprietary_vendor_asus",
+    "target_path": "vendor/asus",
+    "branch": "o8.1"
+  }
+]
+

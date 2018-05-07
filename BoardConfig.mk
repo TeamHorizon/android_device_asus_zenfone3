@@ -236,7 +236,6 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_STA := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
-
 # Enable dexpreopt to speed boot time
 ifeq ($(HOST_OS),linux)
   ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
@@ -247,5 +246,4 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # inherit from the proprietary version
--include vendor/asus/Z017/BoardConfigVendor.mk
-
+-include vendor/asus/zenfone3/BoardConfigVendor.mk
