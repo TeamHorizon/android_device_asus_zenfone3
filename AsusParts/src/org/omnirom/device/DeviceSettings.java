@@ -66,6 +66,10 @@ public class DeviceSettings extends PreferenceActivity implements
         if (mVibratorStrength != null) {
             mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
         }
+
+        mSwipe2Wake = (SwitchPreference) findPreference(KEY_SWIPE2WAKE);
+        mSwipe2Wake.setChecked(mPrefs.getBoolean(DeviceSettings.KEY_SWIPE2WAKE, false));
+        mSwipe2Wake.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -87,10 +91,6 @@ public class DeviceSettings extends PreferenceActivity implements
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        mSwipe2Wake = (SwitchPreference) findPreference(KEY_SWIPE2WAKE);
-        mSwipe2Wake.setChecked(mPrefs.getBoolean(DeviceSettings.KEY_SWIPE2WAKE, false));
-        mSwipe2Wake.setOnPreferenceChangeListener(this);
-
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 

@@ -21,6 +21,7 @@ allow qti_init_shell factory_file:dir search;
 # sysfs
 allow qti_init_shell sysfs_devices_system_cpu:dir write;
 allow qti_init_shell sysfs:file write;
+allow qti_init_shell sysfs_gesture_device:file { read open write getattr };
 
 # wifi
 allow qti_init_shell factory_file:file getattr;
